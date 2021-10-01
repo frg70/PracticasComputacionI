@@ -4,7 +4,7 @@
  */
 #include <iostream>
 #include <array>
-#include <iomanip>
+#include <cmath>
 
 // Añadir std para fácil llamado de funciones
 using namespace std;
@@ -111,15 +111,16 @@ void GaussJordan(matriz & miMatriz)
          }
      //Intercambio de filas
      if (i != index){
-         for (int w = 0; w < matrixSize; w++){
-             temp = miMatriz[i][w];
-             miMatriz[i][w] = miMatriz[index][w];
-             miMatriz[index][w] = temp;
+         for (int v = 0; v < matrixSize +1 ; v++){
+             temp = miMatriz[i][v];
+             miMatriz[i][v] = miMatriz[index][v];
+             miMatriz[index][v] = temp;
              }
-     if (miMatriz[i][i] == 0){
-         cout << "No existe solucion" << endl;
      }
-     else{
+         if (miMatriz[i][i] == 0) {
+             cout << "No existe solucion" << endl;
+         }
+         else{
          for (int v = 0; v <matrixSize; v++){
              if (v != i){
                  pivote = -miMatriz[v][i];
@@ -138,6 +139,4 @@ void GaussJordan(matriz & miMatriz)
 
      }
      }
-             }
-
-             }
+}

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/980012754/Documents/Prueba2/PracticasComputacionI/GaussJordan
+# Install script for directory: C:/Users/980012754/Documents/Pruebas3/PracticasComputacionI/GaussJordan
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/980012754/Documents/Prueba2/PracticasComputacionI/GaussJordan/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/980012754/Documents/Pruebas3/PracticasComputacionI/GaussJordan/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

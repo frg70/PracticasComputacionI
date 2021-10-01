@@ -129,7 +129,7 @@ void GaussJordan(matriz & miMatriz)
              }
              else{
                  pivote = miMatriz[i][i];
-                 for (int z = 1; z < matrixSize; z++){
+                 for (int z = 1; z < matrixSize + 1; z++){
                      miMatriz[v][z] = miMatriz[v][z] / pivote;
                  }
              }
@@ -141,9 +141,3 @@ void GaussJordan(matriz & miMatriz)
              }
 
              }
-//Proceso mecánica para realizar GaussJordan
-// 1. Encontrar una fila pivote
-// 2. Convertir esa fila pivote en 1
-// 3. Reducir la fila inferior restando la superior mutiplicada por 1/ fila inferior
-// 4. Subir encima del pivote
-// 5. Reducir la fila con el uso de mi pivote

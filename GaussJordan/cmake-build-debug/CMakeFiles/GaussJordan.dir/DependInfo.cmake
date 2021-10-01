@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/980012754/Documents/Prueba2/PracticasComputacionI/GaussJordan/GaussJordan.cpp" "C:/Users/980012754/Documents/Prueba2/PracticasComputacionI/GaussJordan/cmake-build-debug/CMakeFiles/GaussJordan.dir/GaussJordan.cpp.obj"
+  "C:/Users/980012754/Documents/Pruebas3/PracticasComputacionI/GaussJordan/GaussJordan.cpp" "C:/Users/980012754/Documents/Pruebas3/PracticasComputacionI/GaussJordan/cmake-build-debug/CMakeFiles/GaussJordan.dir/GaussJordan.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 

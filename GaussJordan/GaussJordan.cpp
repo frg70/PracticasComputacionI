@@ -97,8 +97,8 @@ No regresa ningún valor.
 template <typename matriz>
 void GaussJordan(matriz & miMatriz)
 {
-    int maxC{0}, matrixSize = miMatriz.size(), index{0}, temp{0};
-    double pivote{0};
+    int matrixSize = miMatriz.size(), index{0};
+    double pivote{0}, maxC{0}, temp{0};
      //obtener el valor máximo
      for (int i=0; i < matrixSize; i++){
          maxC = abs(miMatriz[i][i]);
@@ -106,7 +106,8 @@ void GaussJordan(matriz & miMatriz)
         //Comparación para encontrar el pivote
          for (int j= i +1; j < matrixSize; j++) {
              if (maxC < abs(miMatriz[j][i])) {
-                 maxC = abs(miMatriz[i][j]);
+                 maxC = abs(miMatriz[j][i]);
+                 index = j;
              }
          }
      //Intercambio de filas
@@ -117,20 +118,21 @@ void GaussJordan(matriz & miMatriz)
              miMatriz[index][v] = temp;
              }
      }
-         if (miMatriz[i][i] == 0) {
+     if (miMatriz[i][i] == 0) {
              cout << "No existe solucion" << endl;
+         break;
          }
-         else{
+     else{
          for (int v = 0; v <matrixSize; v++){
              if (v != i){
                  pivote = -miMatriz[v][i];
-                 for (int  z = 1; z < matrixSize; z++){
+                 for (int  z = i; z < matrixSize +1; z++){
                      miMatriz[v][z] = miMatriz[v][z] + pivote * miMatriz[i][z]/miMatriz[i][i];
                  }
              }
              else{
                  pivote = miMatriz[i][i];
-                 for (int z = 1; z < matrixSize + 1; z++){
+                 for (int z = i; z < matrixSize + 1; z++){
                      miMatriz[v][z] = miMatriz[v][z] / pivote;
                  }
              }

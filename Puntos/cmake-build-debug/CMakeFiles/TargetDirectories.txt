@@ -1,0 +1,3 @@
+C:/Users/980012754/Documents/Pruebas3/PracticasComputacionI/Puntos/cmake-build-debug/CMakeFiles/Puntos.dir
+C:/Users/980012754/Documents/Pruebas3/PracticasComputacionI/Puntos/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/980012754/Documents/Pruebas3/PracticasComputacionI/Puntos/cmake-build-debug/CMakeFiles/rebuild_cache.dir

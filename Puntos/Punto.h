@@ -16,10 +16,7 @@ public:
     float GetX() ;
     float GetY() ;
 private:
-    int main(){
-        Punto2D miPunto;
-
-    }
+    float miPunto;
 };
 #endif //PUNTOS_PUNTO_H
 

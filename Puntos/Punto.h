@@ -4,7 +4,6 @@
 #ifndef PUNTOS_PUNTO_H
 #define PUNTOS_PUNTO_H
 #include <iostream>
-#include <array>
 using namespace std;
 class Punto2D{
 public:
@@ -14,8 +13,8 @@ public:
     float RotarRespectoAlOrigen(float temp1);
 
     float Escalar(float temp1,float temp2);
-    float GetX();
-    float GetY();
+    float GetX() ;
+    float GetY() ;
 private:
     int main(){
         Punto2D miPunto;

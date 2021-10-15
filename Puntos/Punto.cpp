@@ -34,7 +34,7 @@ float Punto2D::Escalar(float temp1, float temp2) {
     coordY = coordY * temp2;
     return 0;
 }
-float Punto2D::GetX() {
+float Punto2D::GetX () {
     return coordX;
 }
 float Punto2D::GetY() {

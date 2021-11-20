@@ -32,8 +32,9 @@ def GaussJordan():
           array[j][k] = array[j][k] - ratio*array[i][k]
   for i in range(n):
     solution[i] = a[i][n]/a[i][i]                             
-  print('\Solucion: ')
+  print('Solución: ')
   for i in range(n):
-    print('X%d = %0.2f' %(i,x[i]), end = '\t')
+    print('X%d = %0.2f' %(i,x[i]), end = '\n')
+  return " "  
 
 print(GaussJordan())

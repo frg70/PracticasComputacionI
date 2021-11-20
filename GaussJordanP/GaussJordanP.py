@@ -14,50 +14,26 @@ Original file is located at
 !pip install numpy
 import numpy as np 
 import sys
-n = int(input("Entre el número de ecuaciones de su sistema: "))
 # Reading number of unknowns
-def LLenarMatriz(n):
-  numFilas = n 
-  numColumas = n+1
+def GaussJordan():
+  n = int(input("Entre el número de ecuaciones de su sistema: "))
   array = np.zeros((n,n+1))
-  print("Por favor rellene su matriz: ")
+  solution = np.zeros(n)
   for i in range(n):
     for j in range(n+1):
       array[i][j] = float(input( 'Valor de elemento: ['+str(i)+']['+ str(j)+']: '))
-  return array     
-def GaussJordan(array,n):
   for i in range(n):
-    maxC = abs(array[i][i])
-    index = i
+    if array[i][i] == 0.0:
+      sys.exit("El sistema no tiene solución")
     for j in range(n):
-      if maxC < abs(array[j][i]):
-        maxC = np.fabs([array[j][i]])
-        index = j  
-    if i != index:
-      for k in range(n+1):
-        temp = array[i][k]
-        array[i][k] = array[index][k]
-        array[index][k] = temp
-    elif (array[i][i] == 0):
-      sys.exit("No existe solución")
-    else:
-      for v in range(n):
-        if (v != i):
-          pivot = -array[v][i]
-          for z in range(n):
-            array[v][z] = array[v][z] + pivot*array[i][z]/array[i][i]
-      else:
-        pivot = array[i][i]
-        for e in range(n+1):
-          array[v][e] = array[v][e]/pivot
-  solved = array      
-  return solved                 
-def ImprimirSolucion(solved,n):
+      if i != j: 
+        ratio = array[j][i]/a[i][i]
+        for k in range(n+1):
+          array[j][k] = array[j][k] - ratio*array[i][k]
+  for i in range(n):
+    solution[i] = a[i][n]/a[i][i]                             
   print('\Solucion: ')
   for i in range(n):
-    print("x" + str(i) + " = " + " " + str(array[i][n]))
-            
-A = LLenarMatriz(n)
-X = GaussJordan(A,n)
-print(ImprimirSolucion(X,n))
+    print('X%d = %0.2f' %(i,x[i]), end = '\t')
 
+print(GaussJordan())
